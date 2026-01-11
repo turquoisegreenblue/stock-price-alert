@@ -1,4 +1,6 @@
 import os
+import requests
+import yfinance as yf  #
 
 # GitHubのSecretsから読み込む設定
 LINE_TOKEN = os.environ.get('LINE_TOKEN')
