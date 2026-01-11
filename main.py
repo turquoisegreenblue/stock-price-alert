@@ -1,9 +1,8 @@
-import requests
-import yfinance as yf
+import os
 
-# --- 設定（あなたの情報を入れてください） ---
-LINE_TOKEN = 'temp'
-USER_ID = 'temp'
+# GitHubのSecretsから読み込む設定
+LINE_TOKEN = os.environ.get('LINE_TOKEN')
+USER_ID = os.environ.get('USER_ID')
 
 # --- 監視リストの設定 { "銘柄コード": 目標価格 } ---
 # 日本株は「コード.T」、日経平均は「^N225」、米国株はそのまま（AAPL等）
