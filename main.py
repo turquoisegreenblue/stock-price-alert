@@ -99,8 +99,11 @@ for ticker, threshold in watch_list.items():
 
 # 1つでも条件に合致するものがあればLINE送信
 if alert_results:
-    message = "【株価アラート】\n以下の銘柄が目標価格に到達しました！\n\n" + "\n".join(alert_results)
+    message = "【株価アラート】\n目標価格に到達しました！\n\n" + "\n".join(alert_results)
     send_line(message)
-    print("LINEを送信しました。")
+    print("LINE送信完了")
 else:
-    print("本日、条件を満たす銘柄はありませんでした。")
+    # 条件に合致しなくても送るメッセージ
+    message = "【定期報告】本日、条件を満たす銘柄はありませんでした。システムは正常に稼働しています。"
+    send_line(message)
+    print("定期報告LINEを送信しました")
