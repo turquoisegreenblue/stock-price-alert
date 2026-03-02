@@ -2,7 +2,7 @@ name: Stock-Alert-Bot
 
 on:
   schedule:
-    - cron: '45 23 * * 1-5'
+    - cron: '45 23 * * 0-4'
   workflow_dispatch:
 
 jobs:
